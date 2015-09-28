@@ -65,13 +65,13 @@ if [[ $NODE_IS_INSTALLED -ne 0 ]]; then
     # Change where npm global packages are located
     #npm config set prefix /home/vagrant/npm
 
-    if [[ -f "/home/vagrant/.profile" ]]; then
+    #if [[ -f "/home/vagrant/.profile" ]]; then
         # Add new NPM Global Packages location to PATH (.profile)
         #printf "\n# Add new NPM global packages location to PATH\n%s" 'export PATH=$PATH:~/npm/bin' >> /home/vagrant/.profile
 
         # Add new NPM root to NODE_PATH (.profile)
         #printf "\n# Add the new NPM root to NODE_PATH\n%s" 'export NODE_PATH=$NODE_PATH:~/npm/lib/node_modules' >> /home/vagrant/.profile
-    fi
+    #fi
 
 fi
 
