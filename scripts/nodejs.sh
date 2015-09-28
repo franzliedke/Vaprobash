@@ -45,11 +45,15 @@ if [[ $NODE_IS_INSTALLED -ne 0 ]]; then
 
     # If set to latest, get the current node version from the home page
     if [[ $NODEJS_VERSION -eq "latest" ]]; then
+        echo "Fetch NODEJS_VERSION"
         NODEJS_VERSION=`curl -L 'nodejs.org' | grep 'Current Version' | awk '{ print $4 }' | awk -F\< '{ print $1 }'`
+        echo "$NODEJS_VERSION"
     fi
 
     # Install Node
     nvm install $NODEJS_VERSION
+    
+    echo "Install done"
 
     # Set a default node version and start using it
     nvm alias default $NODEJS_VERSION
